@@ -13,6 +13,7 @@ from dataclasses import dataclass
 
 import numpy as np
 from reachy_mini import ReachyMini
+from reachy_mini.io.protocol import MotorControlMode
 from reachy_mini.utils import create_head_pose
 from reachy_mini.utils.interpolation import InterpolationTechnique
 
@@ -87,6 +88,28 @@ def _check_limits() -> None:
 
 
 _check_limits()
+
+
+def ensure_motors_enabled(reachy_mini: ReachyMini) -> None:
+    """Switch torque on if it is off, without the head jumping.
+
+    Another app, Reachy Mini Control, or the end of an earlier session can leave
+    the motors disabled (limp). Movement commands are then silently ignored, so
+    the robot would speak without rising. Pollen's safe pattern: make the
+    current pose the goal, then disable and re-enable all motors together.
+    """
+    status = reachy_mini.client.get_status()
+    mode = status.backend_status.motor_control_mode if status.backend_status else None
+    if mode == MotorControlMode.Enabled:
+        return
+    logger.info("Motors were %s; enabling them safely", getattr(mode, "value", mode))
+    head = reachy_mini.get_current_head_pose()
+    _, antennas = reachy_mini.get_current_joint_positions()
+    reachy_mini.goto_target(
+        head=head, antennas=list(antennas), duration=0.05, body_yaw=None,
+    )
+    reachy_mini.disable_motors()  # all together: avoids a known mixed-state edge case
+    reachy_mini.enable_motors()
 
 
 def go_to(reachy_mini: ReachyMini, pose: Pose) -> None:

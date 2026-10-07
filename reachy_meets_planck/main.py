@@ -18,7 +18,12 @@ import numpy as np
 import psutil
 from reachy_mini import ReachyMini, ReachyMiniApp
 
-from reachy_meets_planck.gestures import NEUTRAL, GestureWorker, go_to
+from reachy_meets_planck.gestures import (
+    NEUTRAL,
+    GestureWorker,
+    ensure_motors_enabled,
+    go_to,
+)
 from reachy_meets_planck.listener import BEGIN, CONTINUE, END, STOP, CommandListener
 from reachy_meets_planck.playlist import (
     FLOURISH,
@@ -68,6 +73,7 @@ class ReachyMeetsPlanck(ReachyMiniApp):
         gestures.start()
 
         try:
+            ensure_motors_enabled(reachy_mini)
             reachy_mini.wake_up()
             reachy_mini.enable_wobbling()
             started = psutil.Process().create_time()
