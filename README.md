@@ -48,10 +48,18 @@ process starts:
 | Offline speech-recognition model | ~0.3 s |
 | Wake-up animation (Reachy rises before speaking) | ~2.5 s |
 
-The audio output may need up to about 2 s more to start the first time it plays. The app sends
-it silence before the wake-up animation to give it a head start. On the robot's own computer,
-startup will differ (it is slower than a Mac); the app logs the exact figure on every run as
-"Ready to speak … s after the app process started".
+On a **Reachy Mini Wireless**, with the app installed from Reachy Mini Control and running on the
+robot itself, it was ready to speak **8.3–8.6 s** after its process started (about 6 s of SDK
+start-up, then the motor check and the ~2.5 s wake-up animation). A stopwatch from pressing
+Start to the first word gave about 8–9 s.
+
+The audio output may need up to about 2 s more to start the first time it plays; the app sends it
+silence before the wake-up animation to give it a head start. The app logs its figure on every run
+as "Ready to speak … s after the app process started".
+
+**Motors:** when an app stops, the robot switches its motors off (the head goes limp). On start-up
+the app checks this and, if needed, switches them back on safely before rising, logging
+"Motors were disabled; enabling them safely".
 
 ## Development setup (macOS, uv)
 
