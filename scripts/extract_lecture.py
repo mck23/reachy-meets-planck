@@ -1,6 +1,6 @@
 """Extract Planck's First Lecture from the Project Gutenberg LaTeX source.
 
-Produces ``data/lecture1_text.json``: Planck's words, made speakable
+Produces ``reachy_meets_planck/data/lecture1_text.json``: Planck's words, made speakable
 (LaTeX removed, equations written out as words), split into sentences.
 Planck's wording is never changed; only notation is turned into speech.
 
@@ -21,7 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE_DIR = ROOT / "data" / "source"
-OUTPUT = ROOT / "data" / "lecture1_text.json"
+OUTPUT = ROOT / "reachy_meets_planck" / "data" / "lecture1_text.json"
 SOURCE_URL = "https://www.gutenberg.org/files/39017/39017-t.zip"
 TEX_NAME = "39017-t/39017-t.tex"
 

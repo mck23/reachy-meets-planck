@@ -48,6 +48,9 @@ class FakeSpeaker:
     def load(self, path):
         return path.stem
 
+    def prefetch(self, path):
+        pass
+
     def play(self, key, interrupted):
         self.listener.now_playing = key
         self.listener.waiting = False
@@ -142,3 +145,39 @@ class GestureSafetyTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SpeakerDecodeTest(unittest.TestCase):
+    """The compressed clips decode, apply gain, and prefetching returns the same audio."""
+
+    def setUp(self):
+        from reachy_meets_planck.speech import Speaker
+
+        class Media:
+            def get_output_audio_samplerate(self):
+                return 16000
+
+        self.plain = Speaker(Media())
+        self.loud = Speaker(Media(), gain=1.25)
+
+    def tearDown(self):
+        self.plain.close()
+        self.loud.close()
+
+    def test_prefetched_clip_matches_direct_decode_with_gain(self):
+        import numpy as np
+
+        from reachy_meets_planck.playlist import clip_path, load_playlist
+
+        path = clip_path(load_playlist()[1])
+        self.loud.prefetch(path)
+        prefetched = self.loud.load(path)
+        direct = self.plain.decode(path)
+        self.assertEqual(len(prefetched), len(direct))
+        self.assertGreater(len(direct), 16000)  # more than a second of speech
+        np.testing.assert_allclose(prefetched, np.clip(direct * 1.25, -1, 1), atol=1e-5)
+
+    def test_every_clip_is_present_and_current(self):
+        from reachy_meets_planck.playlist import load_performance, load_playlist, missing_clips
+
+        self.assertEqual(missing_clips(load_playlist(), load_performance()["voice"]), [])

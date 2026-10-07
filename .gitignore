@@ -9,7 +9,6 @@ agents.local.md
 # --- Generated or downloaded data ---
 data/audio/
 data/source/
-models/
 
 # --- Python ---
 .venv/

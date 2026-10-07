@@ -15,6 +15,7 @@ Uses Vosk, an offline speech recogniser, in two ways at once:
 import io
 import json
 import logging
+import os
 import threading
 import time
 import urllib.request
@@ -26,8 +27,6 @@ import numpy as np
 import soxr
 import vosk
 
-from reachy_meets_planck.playlist import PROJECT_DIR
-
 STOP = "stop"
 BEGIN = "begin"
 CONTINUE = "continue"
@@ -38,7 +37,10 @@ VOSK_RATE = 16000
 HOLD_OFF_S = 0.5  # after clear(), ignore audio that started before it
 MODEL_NAME = "vosk-model-small-en-us-0.15"
 MODEL_URL = f"https://alphacephei.com/vosk/models/{MODEL_NAME}.zip"
-MODEL_DIR = PROJECT_DIR / "models"
+# Downloaded once into the user's cache folder (writable on the robot too).
+MODEL_DIR = (
+    Path(os.environ.get("XDG_CACHE_HOME", Path.home() / ".cache")) / "reachy_meets_planck"
+)
 
 logger = logging.getLogger(__name__)
 

@@ -26,13 +26,13 @@ sys.path.insert(0, str(SCRIPTS_DIR))
 from render_audio import render, save_wav  # noqa: E402
 
 from reachy_meets_planck.playlist import (  # noqa: E402
-    AUDIO_DIR,
+    MASTER_DIR,
     PROJECT_DIR,
     load_performance,
     load_playlist,
 )
 
-AUDITION_DIR = AUDIO_DIR / "auditions"
+AUDITION_DIR = MASTER_DIR / "auditions"
 
 
 def main() -> None:

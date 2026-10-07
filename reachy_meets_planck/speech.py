@@ -1,16 +1,21 @@
-"""Play cached speech through the robot's speaker, pausable at any moment.
+"""Play speech clips through the robot's speaker, pausable at any moment.
 
-Audio is pushed in short chunks, never more than ``LEAD_S`` ahead of real time,
-so a pause takes effect almost immediately. Any audio already queued is flushed
-when interrupted.
+Clips are compressed Ogg Opus files. Each is decompressed in memory just
+before it plays; ``prefetch()`` decompresses the next one in the background
+while the current one is playing, so slow hardware adds no extra gap.
+
+Audio is pushed in short chunks, never more than ``LEAD_S`` ahead of real
+time, so a pause takes effect almost immediately. Any audio already queued is
+flushed when interrupted.
 """
 
 import time
-import wave
 from collections.abc import Callable
+from concurrent.futures import Future, ThreadPoolExecutor
 from pathlib import Path
 
 import numpy as np
+import soundfile
 import soxr
 
 CHUNK_S = 0.1  # size of each pushed chunk
@@ -25,17 +30,26 @@ class Speaker:
         self.rate = media.get_output_audio_samplerate()
         if self.rate <= 0:
             raise RuntimeError("Robot audio output is not available.")
+        self._decoder = ThreadPoolExecutor(max_workers=1, thread_name_prefix="decode")
+        self._ahead: dict[Path, Future[np.ndarray]] = {}
 
-    def load(self, path: Path) -> np.ndarray:
-        """Read a mono 16-bit WAV, apply the gain and resample to the speaker's rate."""
-        with wave.open(str(path), "rb") as wav:
-            rate = wav.getframerate()
-            frames = wav.readframes(wav.getnframes())
-        samples = np.frombuffer(frames, dtype="<i2").astype(np.float32) / 32768.0
-        samples = np.clip(samples * self.gain, -1.0, 1.0)
+    def decode(self, path: Path) -> np.ndarray:
+        """Decompress a clip to mono float samples at the speaker's rate, with gain."""
+        samples, rate = soundfile.read(path, dtype="float32", always_2d=True)
+        samples = np.clip(samples[:, 0] * self.gain, -1.0, 1.0)
         if rate != self.rate:
             samples = soxr.resample(samples, rate, self.rate)
         return samples.astype(np.float32)
+
+    def prefetch(self, path: Path) -> None:
+        """Start decompressing ``path`` in the background (keeps only the latest)."""
+        if path not in self._ahead:
+            self._ahead = {path: self._decoder.submit(self.decode, path)}
+
+    def load(self, path: Path) -> np.ndarray:
+        """Return the decompressed clip, from the prefetch if one is ready."""
+        future = self._ahead.pop(path, None)
+        return future.result() if future else self.decode(path)
 
     def play(self, samples: np.ndarray, interrupted: Callable[[], bool]) -> bool:
         """Play ``samples``; return True if finished, False if interrupted."""
@@ -77,3 +91,6 @@ class Speaker:
         audio = getattr(self.media, "audio", None)
         if audio is not None and hasattr(audio, "clear_player"):
             audio.clear_player()
+
+    def close(self) -> None:
+        self._decoder.shutdown(wait=False, cancel_futures=True)

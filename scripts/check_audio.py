@@ -1,4 +1,4 @@
-"""Sanity-check the rendered speech clips.
+"""Sanity-check the rendered speech masters (data/audio/*.wav).
 
 Flags clips whose speaking rate is far from the typical rate (a sign that the
 speech was cut off or that the voice wandered), clips that clip (too loud), and
@@ -20,10 +20,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from reachy_meets_planck.playlist import (  # noqa: E402
     LECTURE,
     PROJECT_DIR,
-    audio_path,
     load_performance,
     load_playlist,
-    missing_audio,
+    master_path,
+    missing_masters,
 )
 
 RATE_TOLERANCE = 0.45  # flag clips more than 45% faster or slower than typical
@@ -52,7 +52,7 @@ def longest_silence_s(samples: np.ndarray, rate: int) -> float:
 
 def main() -> None:
     playlist = load_playlist()
-    missing = missing_audio(playlist, load_performance()["voice"])
+    missing = missing_masters(playlist, load_performance()["voice"])
     if missing:
         print(f"{len(missing)} clips missing or out of date, e.g. {missing[0].key}")
 
@@ -60,7 +60,7 @@ def main() -> None:
     for item in playlist:
         if item in missing:
             continue
-        samples, rate = read(audio_path(item))
+        samples, rate = read(master_path(item))
         seconds = len(samples) / rate
         stats.append((item, seconds, len(item.text) / seconds, np.abs(samples).max(),
                       longest_silence_s(samples, rate)))
@@ -86,7 +86,7 @@ def main() -> None:
     print(f"\n{flagged} clip(s) flagged." if flagged else "No problems found.")
     if flagged:
         print("Listen to them in "
-              f"{audio_path(playlist[0]).parent.relative_to(PROJECT_DIR)}/. To re-render one, "
+              f"{master_path(playlist[0]).parent.relative_to(PROJECT_DIR)}/. To re-render one, "
               "delete its .wav file and run scripts/render_audio.py again.")
 
 

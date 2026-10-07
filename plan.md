@@ -27,14 +27,17 @@ safe gestures and responds to the voice commands **stop / begin / continue / end
 
 - `scripts/extract_lecture.py`: downloads Gutenberg's LaTeX source and extracts Lecture One. It
   turns the notation into speech (equations as words; "e.g." becomes "for example") and splits the
-  text into **219 sentences** → `data/lecture1_text.json` (7,095 words, about 50 min).
-- `data/performance.json`: the voice style, greeting, closing, flourishes and gesture cues, written
+  text into **219 sentences** → `reachy_meets_planck/data/lecture1_text.json` (7,095 words, about 50 min).
+- `reachy_meets_planck/data/performance.json`: the voice style, greeting, closing, flourishes and gesture cues, written
   by Claude Code during development. **Claude is not called at run time.**
 
 ### Voice
 
-- `scripts/render_audio.py` (one-time, about 50 min of audio) asks OpenAI for one WAV per sentence
-  or flourish and caches it in `data/audio/` (git-ignored). Uses `OPENAI_API_KEY` from `.env`.
+- `scripts/render_audio.py` (one-time, about 50 min of audio) asks OpenAI for one WAV master per
+  sentence or aside in `data/audio/` (git-ignored; uses `OPENAI_API_KEY` from `.env`), then
+  compresses each to a 16 kHz Ogg Opus clip in `reachy_meets_planck/audio/` (10 MB in total,
+  shipped with the app via Git LFS). On the robot each clip is decompressed in memory just before
+  it plays, the next one in the background.
 - At run time the app plays the cached audio in small chunks through `mini.media.push_audio_sample()`
   (the robot's speaker), so a pause takes effect within a fraction of a second. The head sways gently
   while speaking (`enable_wobbling`).
@@ -70,18 +73,18 @@ safe gestures and responds to the voice commands **stop / begin / continue / end
 ## Repo layout
 
 ```
-reachy-app-one/            (GitHub: mck23/reachy-meets-planck, private)
-├── .env                   ← OPENAI_API_KEY (never committed)
+reachy-app-one/              (GitHub: mck23/reachy-meets-planck, private)
+├── .env                     ← OPENAI_API_KEY (never committed)
 ├── .env.example
-├── .githooks/pre-commit   ← blocks .env files and sk-… keys
-├── plan.md
-├── data/
-│   ├── lecture1_text.json ← Planck's words, speakable (committed)
-│   ├── performance.json   ← voice, greeting, flourishes, gestures (committed)
-│   └── audio/             ← generated WAVs (ignored)
-├── scripts/
-│   ├── extract_lecture.py
-│   └── render_audio.py
-└── reachy_meets_planck/   ← app package (scaffolded with reachy-mini-app-assistant, no --publish)
-    ├── main.py  speech.py  listener.py  gestures.py
+├── .gitattributes           ← *.ogg stored with Git LFS
+├── .githooks/               ← pre-commit blocks .env files and sk-… keys; Git LFS hooks
+├── LICENSE                  ← MIT
+├── README.md  index.html  style.css  pyproject.toml  plan.md
+├── data/                    ← development only (ignored): WAV masters, Gutenberg source
+├── scripts/                 ← extract_lecture, render_audio, check_audio, audition_voices
+├── tests/
+└── reachy_meets_planck/     ← the app package (everything here is installed on the robot)
+    ├── main.py  speech.py  listener.py  gestures.py  playlist.py
+    ├── data/                ← lecture1_text.json, performance.json
+    └── audio/               ← 232 Ogg Opus clips + manifest.json
 ```

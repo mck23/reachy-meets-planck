@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 
@@ -8,10 +8,13 @@ name = "reachy_meets_planck"
 version = "0.1.0"
 description = "Reachy Mini reads Max Planck's first Columbia lecture (1909)."
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.10"
 dependencies = [
     "reachy-mini",
     "numpy",
+    "soundfile>=0.13",
     "soxr",
     "vosk",
 ]
@@ -36,4 +39,8 @@ where = ["."]
 include = ["reachy_meets_planck*"]
 
 [tool.setuptools.package-data]
-reachy_meets_planck = ["**/*"] # Also include all non-.py files
+# Planck's text, the performance settings and the compressed speech clips.
+reachy_meets_planck = ["data/*.json", "audio/*.ogg", "audio/manifest.json"]
+
+[tool.setuptools.exclude-package-data]
+"*" = ["__pycache__/*", "*.pyc"]

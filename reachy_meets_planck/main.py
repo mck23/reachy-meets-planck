@@ -19,10 +19,10 @@ from reachy_meets_planck.gestures import NEUTRAL, GestureWorker, go_to
 from reachy_meets_planck.listener import BEGIN, CONTINUE, END, STOP, CommandListener
 from reachy_meets_planck.playlist import (
     FLOURISH,
-    audio_path,
+    clip_path,
     load_performance,
     load_playlist,
-    missing_audio,
+    missing_clips,
 )
 from reachy_meets_planck.speech import Speaker
 
@@ -43,11 +43,11 @@ class ReachyMeetsPlanck(ReachyMiniApp):
     def run(self, reachy_mini: ReachyMini, stop_event: threading.Event) -> None:
         playlist = load_playlist()
         performance = load_performance()
-        missing = missing_audio(playlist, performance["voice"])
+        missing = missing_clips(playlist, performance["voice"])
         if missing:
             raise RuntimeError(
-                f"{len(missing)} speech clips are missing or out of date. "
-                "Run: python scripts/render_audio.py"
+                f"{len(missing)} speech clips are missing or out of date "
+                f"(e.g. {missing[0].key}). Run: python scripts/render_audio.py"
             )
 
         media = reachy_mini.media
@@ -66,6 +66,7 @@ class ReachyMeetsPlanck(ReachyMiniApp):
         finally:
             stop_event.set()
             speaker.flush()
+            speaker.close()
             reachy_mini.disable_wobbling()
             go_to(reachy_mini, NEUTRAL)
             reachy_mini.goto_sleep()
@@ -104,7 +105,10 @@ class Performance:
             gap = GAP_AROUND_FLOURISH_S if is_flourish else GAP_AFTER_SENTENCE_S
             if is_flourish and not self.speaker.pause(gap, self._stop_requested):
                 return self._paused(index)
-            if not self.speaker.play(self.speaker.load(audio_path(item)), self._stop_requested):
+            samples = self.speaker.load(clip_path(item))
+            if index + 1 < len(self.playlist):
+                self.speaker.prefetch(clip_path(self.playlist[index + 1]))
+            if not self.speaker.play(samples, self._stop_requested):
                 return self._paused(index)
             if not self.speaker.pause(gap, self._stop_requested):
                 return self._paused(index + 1)

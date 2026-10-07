@@ -1,7 +1,14 @@
-"""Build the ordered list of things Reachy says.
+"""Build the ordered list of things Reachy says, and locate their audio.
 
 Combines Planck's words (``data/lecture1_text.json``) with the performance layer
-(``data/performance.json``): greeting, gesture cues, flourishes and closing.
+(``data/performance.json``): greeting, gesture cues, asides and closing.
+
+Audio lives in two places:
+
+- **Clips** (``reachy_meets_planck/audio/*.ogg``): compressed 16 kHz Ogg Opus,
+  shipped inside the package so they are installed on the robot.
+- **Masters** (``data/audio/*.wav`` in the project folder): the original
+  24 kHz WAVs from text-to-speech. Development only, never installed.
 """
 
 import hashlib
@@ -9,10 +16,14 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
-PROJECT_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = PROJECT_DIR / "data"
-AUDIO_DIR = DATA_DIR / "audio"
-MANIFEST_PATH = AUDIO_DIR / "manifest.json"
+PACKAGE_DIR = Path(__file__).resolve().parent
+DATA_DIR = PACKAGE_DIR / "data"
+CLIP_DIR = PACKAGE_DIR / "audio"
+CLIP_MANIFEST = CLIP_DIR / "manifest.json"
+
+PROJECT_DIR = PACKAGE_DIR.parent  # only meaningful in a development checkout
+MASTER_DIR = PROJECT_DIR / "data" / "audio"
+MASTER_MANIFEST = MASTER_DIR / "manifest.json"
 
 LECTURE = "lecture"
 FLOURISH = "flourish"
@@ -65,18 +76,31 @@ def fingerprint(item: Item, voice: dict) -> str:
     return hashlib.sha256(material.encode("utf-8")).hexdigest()[:16]
 
 
-def audio_path(item: Item) -> Path:
-    return AUDIO_DIR / f"{item.key}.wav"
+def clip_path(item: Item) -> Path:
+    return CLIP_DIR / f"{item.key}.ogg"
 
 
-def missing_audio(items: list[Item], voice: dict) -> list[Item]:
-    """Items whose cached audio is absent or out of date."""
-    manifest = (
-        json.loads(MANIFEST_PATH.read_text()) if MANIFEST_PATH.exists() else {}
-    )
+def master_path(item: Item) -> Path:
+    return MASTER_DIR / f"{item.key}.wav"
+
+
+def read_manifest(path: Path) -> dict[str, str]:
+    return json.loads(path.read_text()) if path.exists() else {}
+
+
+def stale(items: list[Item], voice: dict, manifest: Path, path_of) -> list[Item]:
+    """Items whose audio file is absent or was made from other text/voice."""
+    recorded = read_manifest(manifest)
     return [
         item
         for item in items
-        if manifest.get(item.key) != fingerprint(item, voice)
-        or not audio_path(item).exists()
+        if recorded.get(item.key) != fingerprint(item, voice) or not path_of(item).exists()
     ]
+
+
+def missing_clips(items: list[Item], voice: dict) -> list[Item]:
+    return stale(items, voice, CLIP_MANIFEST, clip_path)
+
+
+def missing_masters(items: list[Item], voice: dict) -> list[Item]:
+    return stale(items, voice, MASTER_MANIFEST, master_path)

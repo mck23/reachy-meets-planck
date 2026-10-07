@@ -4,6 +4,7 @@ emoji: 🔬
 colorFrom: red
 colorTo: blue
 sdk: static
+license: mit
 pinned: false
 short_description: Reachy Mini reads Planck's 1909 lecture aloud
 tags:
@@ -29,34 +30,44 @@ A small effort was made to craft a speech style aligned to Planck, per https://e
 While Reachy is reading, only **stop** is listened for. "Stop" never occurs in the lecture, so
 Reachy can't interrupt itself.
 
-## Setup (macOS, uv)
+## Install on a robot
+
+Install from Reachy Mini Control like any other app. The speech clips (about 10 MB of compressed
+audio) are installed with the app, so no API key or internet access is needed while it runs,
+except for a one-time download of the offline speech-recognition model (about 40 MB).
+
+## Development setup (macOS, uv)
 
 ```bash
 uv venv .venv --python 3.12
 uv pip install --python .venv -e ".[render]" "reachy-mini[mujoco]"
-cp .env.example .env        # then paste your OpenAI key into .env
+git lfs install --local     # the .ogg speech clips are stored with Git LFS
 ```
 
-## 1. Generate the speech (one time)
+## Regenerate the speech (only after changing the text or the voice)
 
-The voice is made by OpenAI `gpt-4o-mini-tts` and cached as WAV files in `data/audio/`
-(git-ignored). Audition a few lines first, then render everything:
+`reachy_meets_planck/data/performance.json` holds the voice settings. The script makes 24 kHz WAV
+masters with OpenAI `gpt-4o-mini-tts` in `data/audio/` (git-ignored, needs `OPENAI_API_KEY` in
+`.env`), then compresses them to the 16 kHz Ogg Opus clips in `reachy_meets_planck/audio/` that
+ship with the app. Only what changed is redone.
 
 ```bash
-.venv/bin/python scripts/render_audio.py --sample     # greeting, title, one flourish
-.venv/bin/python scripts/render_audio.py              # everything (~50 min of audio)
+cp .env.example .env                                  # then paste your OpenAI key into .env
+.venv/bin/python scripts/render_audio.py --sample     # audition a few lines
+.venv/bin/python scripts/render_audio.py              # everything that changed
+.venv/bin/python scripts/check_audio.py               # flag clipped or odd-sounding masters
 ```
 
-## 2. Run in the simulator
+## Run in the simulator
 
 ```bash
 .venv/bin/mjpython -m reachy_mini.daemon.app.main --sim       # terminal 1
 .venv/bin/python -m reachy_meets_planck.main                  # terminal 2
 ```
 
-## 3. Run on the real Reachy Mini Wireless
+## Run from a Mac on a real Reachy Mini Wireless
 
-Turn the robot on and wait for it to join Wi-Fi, then:
+Turn the robot on and wait for it to join Wi-Fi (with no simulator running), then:
 
 ```bash
 .venv/bin/python -m reachy_meets_planck.main
@@ -65,16 +76,23 @@ Turn the robot on and wait for it to join Wi-Fi, then:
 ## How it's built
 
 - `scripts/extract_lecture.py` turns Project Gutenberg's LaTeX source into 219 speakable
-  sentences (`data/lecture1_text.json`). Equations are read out as words; Planck's wording is
-  unchanged.
-- `data/performance.json` adds the voice style, greeting, closing, asides, gesture cues and
-  `playback_gain` (1.25: the robot's own volume is already at 100%; clips peak at 0.68, so this
-  stays below full scale).
-- `reachy_meets_planck/` contains the app itself: `speech.py` (chunked playback with instant
-  pause), `listener.py` (offline Vosk command recognition), `gestures.py` (gentle, capped moves)
-  and `main.py` (the state machine).
+  sentences (`reachy_meets_planck/data/lecture1_text.json`). Equations are read out as words;
+  Planck's wording is unchanged.
+- `reachy_meets_planck/data/performance.json` adds the voice settings, greeting, closing, asides,
+  gesture cues and `playback_gain` (1.25: the robot's own volume is already at 100%; clips peak at
+  0.68, so this stays below full scale).
+- `reachy_meets_planck/` contains the app itself: `speech.py` (decompresses each clip in memory,
+  the next one in the background, and plays it in short chunks so it can pause at once),
+  `listener.py` (offline Vosk command recognition), `gestures.py` (gentle, capped moves) and
+  `main.py` (the state machine).
 
-## Credits
+## About the voice
 
-Text: Max Planck, *Eight Lectures on Theoretical Physics*, translated by A. P. Wills (Columbia
-University Press, 1915). Public domain. Source: Project Gutenberg eBook #39017.
+The voice is **AI-generated** with OpenAI text-to-speech. It is not Max Planck's voice, and no
+recording of Planck was used.
+
+## Credits and license
+
+- Text: Max Planck, *Eight Lectures on Theoretical Physics*, translated by A. P. Wills (Columbia
+  University Press, 1915). Public domain. Source: Project Gutenberg eBook #39017.
+- Code and speech clips: MIT License (see `LICENSE`).
