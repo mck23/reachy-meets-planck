@@ -103,6 +103,21 @@ Turn the robot on and wait for it to join Wi-Fi (with no simulator running), the
   `listener.py` (offline Vosk command recognition), `gestures.py` (gentle, capped moves) and
   `main.py` (the state machine).
 
+## Publish or update the Hugging Face Space
+
+Commit first, then:
+
+```bash
+.venv/bin/hf auth login                        # once, with a write token
+.venv/bin/python scripts/publish_space.py      # create (private) or update the Space
+.venv/bin/python scripts/publish_space.py --public   # when ready to share
+```
+
+The script uploads exactly the files git tracks at the current commit, so `.env` and other local
+files can never be sent. (Pollen's `reachy-mini-app-assistant publish` can fall back to uploading
+the whole folder, so it is not used here.) Installed robots are offered the update in Reachy Mini
+Control.
+
 ## About the voice
 
 The voice is **AI-generated** with OpenAI text-to-speech. It is not Max Planck's voice, and no

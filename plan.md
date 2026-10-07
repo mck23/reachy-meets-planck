@@ -1,6 +1,6 @@
 # Plan — Reachy Meets Planck
 
-**Status:** built 2026-10-06. Simulator test passed (stop → continue, stop → end recognised; audio good; no self-triggers from Reachy's own voice across all 232 clips offline). First real Wireless robot run 2026-10-06: connected over Wi-Fi (WebRTC), greeting and lecture played from the robot, "stop" paused instantly and "end" exited cleanly.
+**Status:** built 2026-10-06. Simulator test passed (stop → continue, stop → end recognised; audio good; no self-triggers from Reachy's own voice across all 232 clips offline). First real Wireless robot run 2026-10-06: connected over Wi-Fi (WebRTC), greeting and lecture played from the robot, "stop" paused instantly and "end" exited cleanly. Packaged with compressed clips (10 MB) and published to the **private** Space `mklejwa/reachy_meets_planck` (2026-10-06); install-from-Space verified on the Mac. Next: install on the robot from Reachy Mini Control.
 
 A Reachy Mini **Wireless** app that reads aloud **Max Planck's First Lecture**, *Introduction:
 Reversibility and Irreversibility*, from *Eight Lectures on Theoretical Physics* (Columbia
