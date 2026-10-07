@@ -36,6 +36,23 @@ Install from Reachy Mini Control like any other app. The speech clips (about 10 
 audio) are installed with the app, so no API key or internet access is needed while it runs,
 except for a one-time download of the offline speech-recognition model (about 40 MB).
 
+## Startup time
+
+Expect a wait of several seconds between starting the app and Reachy's first word. Measured in
+the MuJoCo simulator on an Apple Silicon Mac, the app logs "Ready to speak" **6.6–8.4 s** after its
+process starts:
+
+| Step | Time |
+|---|---|
+| Python start, connecting to the robot, camera and audio setup (Reachy Mini SDK) | ~3.5–5 s |
+| Offline speech-recognition model | ~0.3 s |
+| Wake-up animation (Reachy rises before speaking) | ~2.5 s |
+
+The audio output may need up to about 2 s more to start the first time it plays. The app sends
+it silence before the wake-up animation to give it a head start. On the robot's own computer,
+startup will differ (it is slower than a Mac); the app logs the exact figure on every run as
+"Ready to speak … s after the app process started".
+
 ## Development setup (macOS, uv)
 
 ```bash

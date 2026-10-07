@@ -12,7 +12,10 @@ States::
 
 import logging
 import threading
+import time
 
+import numpy as np
+import psutil
 from reachy_mini import ReachyMini, ReachyMiniApp
 
 from reachy_meets_planck.gestures import NEUTRAL, GestureWorker, go_to
@@ -29,6 +32,7 @@ from reachy_meets_planck.speech import Speaker
 GAP_AFTER_SENTENCE_S = 0.35
 GAP_AROUND_FLOURISH_S = 0.6
 IDLE_POLL_S = 0.1
+WARM_UP_SILENCE_S = 0.5
 
 # Gesture used to acknowledge each command (no spoken acknowledgements).
 ACKNOWLEDGE = {STOP: "tilt", CONTINUE: "nod", BEGIN: "aha", END: "bow"}
@@ -54,6 +58,10 @@ class ReachyMeetsPlanck(ReachyMiniApp):
         media.start_recording()
         media.start_playing()
         speaker = Speaker(media, gain=performance.get("playback_gain", 1.0))
+        # The audio output can take a couple of seconds to start the first time it
+        # receives sound. Feed it silence now, so it can start up during the wake-up
+        # animation rather than after the greeting has been sent.
+        media.push_audio_sample(np.zeros(int(WARM_UP_SILENCE_S * speaker.rate), np.float32))
         listener = CommandListener(media, stop_event)
         gestures = GestureWorker(reachy_mini, stop_event)
         listener.start()
@@ -62,6 +70,8 @@ class ReachyMeetsPlanck(ReachyMiniApp):
         try:
             reachy_mini.wake_up()
             reachy_mini.enable_wobbling()
+            started = psutil.Process().create_time()
+            logger.info("Ready to speak %.1f s after the app process started", time.time() - started)
             Performance(playlist, speaker, listener, gestures, stop_event).perform()
         finally:
             stop_event.set()
