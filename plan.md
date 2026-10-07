@@ -19,7 +19,7 @@ safe gestures and responds to the voice commands **stop / begin / continue / end
 | Q4 | Acknowledgements | **Gesture only.** |
 | Q5 | Gesture frequency | **Occasional.** 67 cues across ~50 min. |
 | Q6 | Greeting | On start, Reachy **rises** (`wake_up`), then says *"This is the first of Eight Lectures on Theoretical Physics, delivered at Columbia University in 1909, by Max Planck."* and **goes straight into the lecture**. |
-| Q7 | Repo | **`mck23/reachy-meets-planck`**, private. Local folder: `~/code/reachy-app-one`. |
+| Q7 | Repo | **`mck23/reachy-meets-planck`**, public on GitHub (private during development). Local folder: `~/code/reachy-app-one`. |
 
 ## How it works
 
@@ -73,7 +73,7 @@ safe gestures and responds to the voice commands **stop / begin / continue / end
 ## Repo layout
 
 ```
-reachy-app-one/              (GitHub: mck23/reachy-meets-planck, private)
+reachy-app-one/              (GitHub: mck23/reachy-meets-planck, public)
 ├── .env                     ← OPENAI_API_KEY (never committed)
 ├── .env.example
 ├── .gitattributes           ← *.ogg stored with Git LFS
