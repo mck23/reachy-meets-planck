@@ -1,0 +1,17 @@
+#!/bin/sh
+# Block commits that would leak secrets.
+status=0
+
+# 1. Any .env file (other than .env.example) staged?
+if git diff --cached --name-only | grep -E '(^|/)\.env(\..+)?$' | grep -v '\.env\.example$'; then
+  echo "pre-commit: refusing to commit a .env file (listed above)." >&2
+  status=1
+fi
+
+# 2. Anything that looks like an API key in the staged changes?
+if git diff --cached -U0 | grep -E '^\+' | grep -E 'sk-(proj-|ant-)?[A-Za-z0-9_-]{20,}' >/dev/null; then
+  echo "pre-commit: staged changes contain something that looks like an API key (sk-...)." >&2
+  status=1
+fi
+
+exit $status

@@ -1,0 +1,1319 @@
+{
+  "source": "Max Planck, Eight Lectures on Theoretical Physics (Columbia University, 1909), trans. A. P. Wills. Project Gutenberg eBook #39017. Public domain.",
+  "segments": [
+    {
+      "id": 0,
+      "paragraph": 0,
+      "kind": "title",
+      "text": "First Lecture. Introduction: Reversibility and Irreversibility."
+    },
+    {
+      "id": 1,
+      "paragraph": 1,
+      "kind": "planck",
+      "text": "Colleagues, ladies and gentlemen: The cordial invitation, which the President of Columbia University extended to me to deliver at this prominent center of American science some lectures in the domain of theoretical physics, has inspired in me a sense of the high honor and distinction thus conferred upon me and, in no less degree, a consciousness of the special obligations which, through its acceptance, would be imposed upon me."
+    },
+    {
+      "id": 2,
+      "paragraph": 1,
+      "kind": "planck",
+      "text": "If I am to count upon meeting in some measure your just expectations, I can succeed only through directing your attention to the branches of my science with which I myself have been specially and deeply concerned, thus exposing myself to the danger that my report in certain respects shall thereby have somewhat too subjective a coloring."
+    },
+    {
+      "id": 3,
+      "paragraph": 2,
+      "kind": "planck",
+      "text": "From those points of view which appear to me the most striking, it is my desire to depict for you in these lectures the present status of the system of theoretical physics."
+    },
+    {
+      "id": 4,
+      "paragraph": 2,
+      "kind": "planck",
+      "text": "I do not say: the present status of theoretical physics; for to cover this far broader subject, even approximately, the number of lecture hours at my disposal would by no means suffice."
+    },
+    {
+      "id": 5,
+      "paragraph": 2,
+      "kind": "planck",
+      "text": "Time limitations forbid the extensive consideration of the details of this great field of learning; but it will be quite possible to develop for you, in bold outline, a representation of the system as a whole, that is, to give a sketch of the fundamental laws which rule in the physics of today, of the most important hypotheses employed, and of the great ideas which have recently forced themselves into the subject."
+    },
+    {
+      "id": 6,
+      "paragraph": 2,
+      "kind": "planck",
+      "text": "I will often gladly endeavor to go into details, but not in the sense of a thorough treatment of the subject, and only with the object of making the general laws more clear, through appropriate specially chosen examples."
+    },
+    {
+      "id": 7,
+      "paragraph": 2,
+      "kind": "planck",
+      "text": "I shall select these examples from the most varied branches of physics."
+    },
+    {
+      "id": 8,
+      "paragraph": 3,
+      "kind": "planck",
+      "text": "If we wish to obtain a correct understanding of the achievements of theoretical physics, we must guard in equal measure against the mistake of overestimating these achievements, and on the other hand, against the corresponding mistake of underestimating them."
+    },
+    {
+      "id": 9,
+      "paragraph": 3,
+      "kind": "planck",
+      "text": "That the second mistake is actually often made, is shown by the circumstance that quite recently voices have been loudly raised maintaining the bankruptcy and, débâcle of the whole of natural science."
+    },
+    {
+      "id": 10,
+      "paragraph": 3,
+      "kind": "planck",
+      "text": "But I think such assertions may easily be refuted by reference to the simple fact that with each decade the number and the significance of the means increase, whereby mankind learns directly through the aid of theoretical physics to make nature useful for its own purposes."
+    },
+    {
+      "id": 11,
+      "paragraph": 3,
+      "kind": "planck",
+      "text": "The technology of today would be impossible without the aid of theoretical physics."
+    },
+    {
+      "id": 12,
+      "paragraph": 3,
+      "kind": "planck",
+      "text": "The development of the whole of electro-technics from galvanoplasty to wireless telegraphy is a striking proof of this, not to mention aerial navigation."
+    },
+    {
+      "id": 13,
+      "paragraph": 3,
+      "kind": "planck",
+      "text": "On the other hand, the mistake of overestimating the achievements of theoretical physics appears to me to be much more dangerous, and this danger is particularly threatened by those who have penetrated comparatively little into the heart of the subject."
+    },
+    {
+      "id": 14,
+      "paragraph": 3,
+      "kind": "planck",
+      "text": "They maintain that some time, through a proper improvement of our science, it will be possible, not only to represent completely through physical formulae the inner constitution of the atoms, but also the laws of mental life."
+    },
+    {
+      "id": 15,
+      "paragraph": 3,
+      "kind": "planck",
+      "text": "I think that there is nothing in the world entitling us to the one or the other of these expectations."
+    },
+    {
+      "id": 16,
+      "paragraph": 3,
+      "kind": "planck",
+      "text": "On the other hand, I believe that there is much which directly opposes them."
+    },
+    {
+      "id": 17,
+      "paragraph": 3,
+      "kind": "planck",
+      "text": "Let us endeavor then to follow the middle course and not to deviate appreciably toward the one side or the other."
+    },
+    {
+      "id": 18,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "When we seek for a solid immovable foundation which is able to carry the whole structure of theoretical physics, we meet with the questions: What lies at the bottom of physics?"
+    },
+    {
+      "id": 19,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "What is the material with which it operates?"
+    },
+    {
+      "id": 20,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "Fortunately, there is a complete answer to this question."
+    },
+    {
+      "id": 21,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "The material with which theoretical physics operates is measurements, and mathematics is the chief tool with which this material is worked."
+    },
+    {
+      "id": 22,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "All physical ideas depend upon measurements, more or less exactly carried out, and each physical definition, each physical law, possesses a more definite significance the nearer it can be brought into accord with the results of measurements."
+    },
+    {
+      "id": 23,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "Now measurements are made with the aid of the senses; before all with that of sight, with hearing and with feeling."
+    },
+    {
+      "id": 24,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "Thus far, one can say that the origin and the foundation of all physical research are seated in our sense perceptions."
+    },
+    {
+      "id": 25,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "Through sense perceptions only do we experience anything of nature; they are the highest court of appeal in questions under dispute."
+    },
+    {
+      "id": 26,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "This view is completely confirmed by a glance at the historical development of physical science."
+    },
+    {
+      "id": 27,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "Physics grows upon the ground of sensations."
+    },
+    {
+      "id": 28,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "The first physical ideas derived were from the individual perceptions of man, and, accordingly, physics was subdivided into: physics of the eye (optics), physics of the ear (acoustics), and physics of heat sensation (theory of heat)."
+    },
+    {
+      "id": 29,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "It may well be said that so far as there was a domain of sense, so far extended originally the domain of physics."
+    },
+    {
+      "id": 30,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "Therefore it appears that in the beginning the division of physics was based upon the peculiarities of man."
+    },
+    {
+      "id": 31,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "It possessed, in short, an anthropomorphic character."
+    },
+    {
+      "id": 32,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "This appears also, in that physical research, when not occupied with special sense perceptions, is concerned with practical life, and particularly with the practical needs of men."
+    },
+    {
+      "id": 33,
+      "paragraph": 4,
+      "kind": "planck",
+      "text": "Thus, the art of geodesy led to geometry, the study of machinery to mechanics, and the conclusion lies near that physics in the last analysis had only to do with the sense perceptions and needs of mankind."
+    },
+    {
+      "id": 34,
+      "paragraph": 5,
+      "kind": "planck",
+      "text": "In accordance with this view, the sense perceptions are the essential elements of the world; to construct an object as opposed to sense perceptions is more or less an arbitrary matter of will."
+    },
+    {
+      "id": 35,
+      "paragraph": 5,
+      "kind": "planck",
+      "text": "In fact, when I speak of a tree, I really mean only a complex of sense perceptions: I can see it, I can hear the rustling of its branches, I can smell its fragrance, I experience pain if I knock my head against it, but disregarding all of these sensations, there remains nothing to be made the object of a measurement, wherewith, therefore, natural science can occupy itself."
+    },
+    {
+      "id": 36,
+      "paragraph": 5,
+      "kind": "planck",
+      "text": "This is certainly true."
+    },
+    {
+      "id": 37,
+      "paragraph": 5,
+      "kind": "planck",
+      "text": "In accordance with this view, the problem of physics consists only in the relating of sense perceptions, in accordance with experience, to fixed laws; or, as one may express it, in the greatest possible economic accommodation of our ideas to our sensations, an operation which we undertake solely because it is of use to us in the general battle of existence."
+    },
+    {
+      "id": 38,
+      "paragraph": 6,
+      "kind": "planck",
+      "text": "All this appears extraordinarily simple and clear and, in accordance with it, the fact may readily be explained that this positivist view is quite widely spread in scientific circles today."
+    },
+    {
+      "id": 39,
+      "paragraph": 6,
+      "kind": "planck",
+      "text": "It permits, so far as it is limited to the standpoint here depicted (not always done consistently by the exponents of positivism), no hypothesis, no metaphysics; all is clear and plain."
+    },
+    {
+      "id": 40,
+      "paragraph": 6,
+      "kind": "planck",
+      "text": "I will go still further; this conception never leads to an actual contradiction."
+    },
+    {
+      "id": 41,
+      "paragraph": 6,
+      "kind": "planck",
+      "text": "I may even say, it can lead to no contradiction."
+    },
+    {
+      "id": 42,
+      "paragraph": 6,
+      "kind": "planck",
+      "text": "But, ladies and gentlemen, this view has never contributed to any advance in physics."
+    },
+    {
+      "id": 43,
+      "paragraph": 6,
+      "kind": "planck",
+      "text": "If physics is to advance, in a certain sense its problem must be stated in quite the inverse way, on account of the fact that this conception is inadequate and at bottom possesses only a formal meaning."
+    },
+    {
+      "id": 44,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "The proof of the correctness of this assertion is to be found directly from a consideration of the process of development which theoretical physics has actually undergone, and which one certainly cannot fail to designate as essential."
+    },
+    {
+      "id": 45,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "Let us compare the system of physics of today with the earlier and more primitive system which I have depicted above."
+    },
+    {
+      "id": 46,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "At the first glance we encounter the most striking difference of all, that in the present system, as well in the division of the various physical domains as in all physical definitions, the historical element plays a much smaller rôle than in the earlier system."
+    },
+    {
+      "id": 47,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "While originally, as I have shown above, the fundamental ideas of physics were taken from the specific sense perceptions of man, the latter are today in large measure excluded from physical acoustics, optics, and the theory of heat."
+    },
+    {
+      "id": 48,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "The physical definitions of tone, color, and of temperature are today in no wise derived from perception through the corresponding senses; but tone and color are defined through a vibration number or wave length, and the temperature through the volume change of a thermometric substance, or through a temperature scale based on the second law of thermodynamics; but heat sensation is in no wise mentioned in connection with the temperature."
+    },
+    {
+      "id": 49,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "With the idea of force it has not been otherwise."
+    },
+    {
+      "id": 50,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "Without doubt, the word force originally meant bodily force, corresponding to the circumstance that the oldest tools, the ax, hammer, and mallet, were swung by man's hands, and that the first machines, the lever, roller, and screw, were operated by men or animals."
+    },
+    {
+      "id": 51,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "This shows that the idea of force was originally derived from the sense of force, or muscular sense, and was, therefore, a specific sense perception."
+    },
+    {
+      "id": 52,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "Consequently, I regard it today as quite essential in a lecture on mechanics to refer, at any rate in the introduction, to the original meaning of the force idea."
+    },
+    {
+      "id": 53,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "But in the modern exact definition of force the specific notion of sense perception is eliminated, as in the case of color sense, and we may say, quite in general, that in modern theoretical physics the specific sense perceptions play a much smaller rôle in all physical definitions than formerly."
+    },
+    {
+      "id": 54,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "In fact, the crowding into the background of the specific sense elements goes so far that the branches of physics which were originally completely and uniquely characterized by an arrangement in accordance with definite sense perceptions have fallen apart, in consequence of the loosening of the bonds between different and widely separated branches, on account of the general advance towards simplification and coordination."
+    },
+    {
+      "id": 55,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "The best example of this is furnished by the theory of heat."
+    },
+    {
+      "id": 56,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "Earlier, heat formed a separate and unified domain of physics, characterized through the perceptions of heat sensation."
+    },
+    {
+      "id": 57,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "Today one finds in well nigh all physics textbooks dealing with heat a whole domain, that of radiant heat, separated and treated under optics."
+    },
+    {
+      "id": 58,
+      "paragraph": 7,
+      "kind": "planck",
+      "text": "The significance of heat perception no longer suffices to bring together the heterogeneous parts."
+    },
+    {
+      "id": 59,
+      "paragraph": 8,
+      "kind": "planck",
+      "text": "In short, we may say that the characteristic feature of the entire previous development of theoretical physics is a definite elimination from all physical ideas of the anthropomorphic elements, particularly those of specific sense perceptions."
+    },
+    {
+      "id": 60,
+      "paragraph": 8,
+      "kind": "planck",
+      "text": "On the other hand, as we have seen above, if one reflects that the perceptions form the point of departure in all physical research, and that it is impossible to contemplate their absolute exclusion, because we cannot close the source of all our knowledge, then this conscious departure from the original conceptions must always appear astonishing or even paradoxical."
+    },
+    {
+      "id": 61,
+      "paragraph": 8,
+      "kind": "planck",
+      "text": "There is scarcely a fact in the history of physics which today stands out so clearly as this."
+    },
+    {
+      "id": 62,
+      "paragraph": 8,
+      "kind": "planck",
+      "text": "Now, what are the great advantages to be gained through such a real obliteration of personality?"
+    },
+    {
+      "id": 63,
+      "paragraph": 8,
+      "kind": "planck",
+      "text": "What is the result for the sake of whose achievement are sacrificed the directness and succinctness such as only the special sense perceptions vouchsafe to physical ideas?"
+    },
+    {
+      "id": 64,
+      "paragraph": 9,
+      "kind": "planck",
+      "text": "The result is nothing more than the attainment of unity and compactness in our system of theoretical physics, and, in fact, the unity of the system, not only in relation to all of its details, but also in relation to physicists of all places, all times, all peoples, all cultures."
+    },
+    {
+      "id": 65,
+      "paragraph": 9,
+      "kind": "planck",
+      "text": "Certainly, the system of theoretical physics should be adequate, not only for the inhabitants of this earth, but also for the inhabitants of other heavenly bodies."
+    },
+    {
+      "id": 66,
+      "paragraph": 9,
+      "kind": "planck",
+      "text": "Whether the inhabitants of Mars, in case such actually exist, have eyes and ears like our own, we do not know,—it is quite improbable; but that they, in so far as they possess the necessary intelligence, recognize the law of gravitation and the principle of energy, most physicists would hold as self evident: and anyone to whom this is not evident had better not appeal to the physicists, for it will always remain for him an unsolvable riddle that the same physics is made in the United States as in Germany."
+    },
+    {
+      "id": 67,
+      "paragraph": 10,
+      "kind": "planck",
+      "text": "To sum up, we may say that the characteristic feature of the actual development of the system of theoretical physics is an ever extending emancipation from the anthropomorphic elements, which has for its object the most complete separation possible of the system of physics and the individual personality of the physicist."
+    },
+    {
+      "id": 68,
+      "paragraph": 10,
+      "kind": "planck",
+      "text": "One may call this the objectiveness of the system of physics."
+    },
+    {
+      "id": 69,
+      "paragraph": 10,
+      "kind": "planck",
+      "text": "In order to exclude the possibility of any misunderstanding, I wish to emphasize particularly that we have here to do, not with an absolute separation of physics from the physicist—for a physics without the physicist is unthinkable,—but with the elimination of the individuality of the particular physicist and therefore with the production of a common system of physics for all physicists."
+    },
+    {
+      "id": 70,
+      "paragraph": 11,
+      "kind": "planck",
+      "text": "Now, how does this principle agree with the positivist conceptions mentioned above?"
+    },
+    {
+      "id": 71,
+      "paragraph": 11,
+      "kind": "planck",
+      "text": "Separation of the system of physics from the individual personality of the physicist?"
+    },
+    {
+      "id": 72,
+      "paragraph": 11,
+      "kind": "planck",
+      "text": "Opposed to this principle, in accordance with those conceptions, each particular physicist must have his special system of physics, in case that complete elimination of all metaphysical elements is effected; for physics occupies itself only with the facts discovered through perceptions, and only the individual perceptions are directly involved."
+    },
+    {
+      "id": 73,
+      "paragraph": 11,
+      "kind": "planck",
+      "text": "That other living beings have sensations is, strictly speaking, but a very probable, though arbitrary, conclusion from analogy."
+    },
+    {
+      "id": 74,
+      "paragraph": 11,
+      "kind": "planck",
+      "text": "The system of physics is therefore primarily an individual matter and, if two physicists accept the same system, it is a very happy circumstance in connection with their personal relationship, but it is not essentially necessary."
+    },
+    {
+      "id": 75,
+      "paragraph": 11,
+      "kind": "planck",
+      "text": "One can regard this view-point however he will; in physics it is certainly quite fruitless, and this is all that I care to maintain here."
+    },
+    {
+      "id": 76,
+      "paragraph": 11,
+      "kind": "planck",
+      "text": "Certainly, I might add, each great physical idea means a further advance toward the emancipation from anthropomorphic ideas."
+    },
+    {
+      "id": 77,
+      "paragraph": 11,
+      "kind": "planck",
+      "text": "This was true in the passage from the Ptolemaic to the Copernican cosmical system, just as it is true at the present time for the apparently impending passage from the so-called classical mechanics of mass points to the general dynamics originating in the principle of relativity."
+    },
+    {
+      "id": 78,
+      "paragraph": 11,
+      "kind": "planck",
+      "text": "In accordance with this, man and the earth upon which he dwells are removed from the centre of the world."
+    },
+    {
+      "id": 79,
+      "paragraph": 11,
+      "kind": "planck",
+      "text": "It may be predicted that in this century the idea of time will be divested of the absolute character with which men have been accustomed to endow it (compare the final lecture)."
+    },
+    {
+      "id": 80,
+      "paragraph": 11,
+      "kind": "planck",
+      "text": "Certainly, the sacrifices demanded by every such revolution in the intuitive point of view are enormous; consequently, the resistance against such a change is very great."
+    },
+    {
+      "id": 81,
+      "paragraph": 11,
+      "kind": "planck",
+      "text": "But the development of science is not to be permanently halted thereby; on the contrary, its strongest impetus is experienced through precisely those forces which attain success in the struggle against the old points of view, and to this extent such a struggle is constantly necessary and useful."
+    },
+    {
+      "id": 82,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "Now, how far have we advanced today toward the unification of our system of physics?"
+    },
+    {
+      "id": 83,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "The numerous independent domains of the earlier physics now appear reduced to two; mechanics and electrodynamics, or, as one may say: the physics of material bodies and the physics of the ether."
+    },
+    {
+      "id": 84,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "The former comprehends acoustics, phenomena in material bodies, and chemical phenomena; the latter, magnetism, optics, and radiant heat."
+    },
+    {
+      "id": 85,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "But is this division a fundamental one?"
+    },
+    {
+      "id": 86,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "Will it prove final?"
+    },
+    {
+      "id": 87,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "This is a question of great consequence for the future development of physics."
+    },
+    {
+      "id": 88,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "For myself, I believe it must be answered in the negative, and upon the following grounds: mechanics and electrodynamics cannot be permanently sharply differentiated from each other."
+    },
+    {
+      "id": 89,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "Does the process of light emission, for example, belong to mechanics or to electrodynamics?"
+    },
+    {
+      "id": 90,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "To which domain shall be assigned the laws of motion of electrons?"
+    },
+    {
+      "id": 91,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "At first glance, one may perhaps say: to electrodynamics, since with the electrons ponderable matter does not play any rôle."
+    },
+    {
+      "id": 92,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "But let one direct his attention to the motion of free electrons in metals."
+    },
+    {
+      "id": 93,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "There he will find, in the study of the classical researches of H. A. Lorentz, for example, that the laws obeyed by the electrons belong rather to the kinetic theory of gases than to electrodynamics."
+    },
+    {
+      "id": 94,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "In general, it appears to me that the original differences between processes in the ether and processes in material bodies are to be considered as disappearing."
+    },
+    {
+      "id": 95,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "Electrodynamics and mechanics are not so remarkably far apart, as is considered to be the case by many people, who already speak of a conflict between the mechanical and the electrodynamic views of the world."
+    },
+    {
+      "id": 96,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "Mechanics requires for its foundation essentially nothing more than the ideas of space, of time, and of that which is moving, whether one considers this as a substance or a state."
+    },
+    {
+      "id": 97,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "The same ideas are also involved in electrodynamics."
+    },
+    {
+      "id": 98,
+      "paragraph": 12,
+      "kind": "planck",
+      "text": "A sufficiently generalized conception of mechanics can therefore also well include electrodynamics, and, in fact, there are many indications pointing toward the ultimate amalgamation of these two subjects, the domains of which already overlap in some measure."
+    },
+    {
+      "id": 99,
+      "paragraph": 13,
+      "kind": "planck",
+      "text": "If, therefore, the gulf between ether and matter be once bridged, what is the point of view which in the last analysis will best serve in the subdivision of the system of physics?"
+    },
+    {
+      "id": 100,
+      "paragraph": 13,
+      "kind": "planck",
+      "text": "The answer to this question will characterize the whole nature of the further development of our science."
+    },
+    {
+      "id": 101,
+      "paragraph": 13,
+      "kind": "planck",
+      "text": "It is, therefore, the most important among all those which I propose to treat today."
+    },
+    {
+      "id": 102,
+      "paragraph": 13,
+      "kind": "planck",
+      "text": "But for the purposes of a closer investigation it is necessary that we go somewhat more deeply into the peculiarities of physical principles."
+    },
+    {
+      "id": 103,
+      "paragraph": 14,
+      "kind": "planck",
+      "text": "We shall best begin at that point from which the first step was made toward the actual realization of the unified system of physics previously postulated by the philosophers only; at the principle of conservation of energy."
+    },
+    {
+      "id": 104,
+      "paragraph": 14,
+      "kind": "planck",
+      "text": "For the idea of energy is the only one besides those of space and time which is common to all the various domains of physics."
+    },
+    {
+      "id": 105,
+      "paragraph": 14,
+      "kind": "planck",
+      "text": "In accordance with what I have stated above, it will be apparent and quite self evident to you that the principle of energy, before its general formularization by Mayer, Joule, and Helmholz, also bore an anthropomorphic character."
+    },
+    {
+      "id": 106,
+      "paragraph": 14,
+      "kind": "planck",
+      "text": "The roots of this principle lay already in the recognition of the fact that no one is able to obtain useful work from nothing; and this recognition had originated essentially in the experiences which were gathered in attempts at the solution of a technical problem: the discovery of perpetual motion."
+    },
+    {
+      "id": 107,
+      "paragraph": 14,
+      "kind": "planck",
+      "text": "To this extent, perpetual motion has come to have for physics a far reaching significance, similar to that of alchemy for the chemist, although it was not the positive, but rather the negative results of these experiments, through which science was advanced."
+    },
+    {
+      "id": 108,
+      "paragraph": 14,
+      "kind": "planck",
+      "text": "Today we speak of the principle of energy quite without reference to the technical viewpoint or to that of man."
+    },
+    {
+      "id": 109,
+      "paragraph": 14,
+      "kind": "planck",
+      "text": "We say that the total amount of energy of an isolated system of bodies is a quantity whose amount can be neither increased nor diminished through any kind of process within the system, and we no longer consider the accuracy with which this law holds as dependent upon the refinement of the methods, which we at present possess, of testing experimentally the question of the realization of perpetual motion."
+    },
+    {
+      "id": 110,
+      "paragraph": 14,
+      "kind": "planck",
+      "text": "In this, strictly speaking, unprovable generalization, impressed upon us with elemental force, lies the emancipation from the anthropomorphic elements mentioned above."
+    },
+    {
+      "id": 111,
+      "paragraph": 15,
+      "kind": "planck",
+      "text": "While the principle of energy stands before us as a complete independent structure, freed from and independent of the accidents appertaining to its historical development, this is by no means true in equal measure in the case of that principle which R. Clausius introduced into physics; namely, the second law of thermodynamics."
+    },
+    {
+      "id": 112,
+      "paragraph": 15,
+      "kind": "planck",
+      "text": "This law plays a very peculiar rôle in the development of physical science, to the extent that one is not able to assert today that for it a generally recognized, and therefore objective formularization, has been found."
+    },
+    {
+      "id": 113,
+      "paragraph": 15,
+      "kind": "planck",
+      "text": "In our present consideration it is therefore a matter of particular interest to examine more closely its significance."
+    },
+    {
+      "id": 114,
+      "paragraph": 16,
+      "kind": "planck",
+      "text": "In contrast to the first law of thermodynamics, or the energy principle, the second law may be characterized as follows."
+    },
+    {
+      "id": 115,
+      "paragraph": 16,
+      "kind": "planck",
+      "text": "While the first law permits in all processes of nature neither the creation nor destruction of energy, but permits of transformations only, the second law goes still further into the limitation of the possible processes of nature, in that it permits, not all kinds of transformations, but only certain types, subject to certain conditions."
+    },
+    {
+      "id": 116,
+      "paragraph": 16,
+      "kind": "planck",
+      "text": "The second law occupies itself, therefore, with the question of the kind and, in particular, with the direction of any natural process."
+    },
+    {
+      "id": 117,
+      "paragraph": 17,
+      "kind": "planck",
+      "text": "At this point a mistake has frequently been made, which has hindered in a very pronounced manner the advance of science up to the present day."
+    },
+    {
+      "id": 118,
+      "paragraph": 17,
+      "kind": "planck",
+      "text": "In the endeavor to give to the second law of thermodynamics the most general character possible, it has been proclaimed by followers of W. Ostwald as the second law of energetics, and the attempt made so to formulate it that it shall determine quite generally the direction of every process occurring in nature."
+    },
+    {
+      "id": 119,
+      "paragraph": 17,
+      "kind": "planck",
+      "text": "Some weeks ago I read in a public academic address of an esteemed colleague the statement that the import of the second law consists in this, that a stone falls downwards, that water flows not up hill, but down, that electricity flows from a higher to a lower potential, and so on."
+    },
+    {
+      "id": 120,
+      "paragraph": 17,
+      "kind": "planck",
+      "text": "This is a mistake which at present is altogether too prevalent not to warrant mention here."
+    },
+    {
+      "id": 121,
+      "paragraph": 18,
+      "kind": "planck",
+      "text": "The truth is, these statements are false."
+    },
+    {
+      "id": 122,
+      "paragraph": 18,
+      "kind": "planck",
+      "text": "A stone can just as well rise in the air as fall downwards; water can likewise flow upwards, as, for example, in a spring; electricity can flow very well from a lower to a higher potential, as in the case of oscillating discharge of a condenser."
+    },
+    {
+      "id": 123,
+      "paragraph": 18,
+      "kind": "planck",
+      "text": "The statements are obviously quite correct, if one applies them to a stone originally at rest, to water at rest, to electricity at rest; but then they follow immediately from the energy principle, and one does not need to add a special second law."
+    },
+    {
+      "id": 124,
+      "paragraph": 18,
+      "kind": "planck",
+      "text": "For, in accordance with the energy principle, the kinetic energy of the stone or of the water can only originate at the cost of gravitational energy, that is, the center of mass must descend."
+    },
+    {
+      "id": 125,
+      "paragraph": 18,
+      "kind": "planck",
+      "text": "If, therefore, motion is to take place at all, it is necessary that the gravitational energy shall decrease."
+    },
+    {
+      "id": 126,
+      "paragraph": 18,
+      "kind": "planck",
+      "text": "That is, the center of mass must descend."
+    },
+    {
+      "id": 127,
+      "paragraph": 18,
+      "kind": "planck",
+      "text": "In like manner, an electric current between two condenser plates can originate only at the cost of electrical energy already present; the electricity must therefore pass to a lower potential."
+    },
+    {
+      "id": 128,
+      "paragraph": 18,
+      "kind": "planck",
+      "text": "If, however, motion and current be already present, then one is not able to say, a priori, anything in regard to the direction of the change; it can take place just as well in one direction as the other."
+    },
+    {
+      "id": 129,
+      "paragraph": 18,
+      "kind": "planck",
+      "text": "Therefore, there is no new insight into nature to be obtained from this point of view."
+    },
+    {
+      "id": 130,
+      "paragraph": 19,
+      "kind": "planck",
+      "text": "Upon an equally inadequate basis rests another conception of the second law, which I shall now mention."
+    },
+    {
+      "id": 131,
+      "paragraph": 19,
+      "kind": "planck",
+      "text": "In considering the circumstance that mechanical work may very easily be transformed into heat, as by friction, while on the other hand heat can only with difficulty be transformed into work, the attempt has been made so to characterize the second law, that in nature the transformation of work into heat can take place completely, while that of heat into work, on the other hand, only incompletely and in such manner that every time a quantity of heat is transformed into work another corresponding quantity of energy must necessarily undergo at the same time a compensating transformation, as, for example, the passage of heat from a higher to a lower temperature."
+    },
+    {
+      "id": 132,
+      "paragraph": 19,
+      "kind": "planck",
+      "text": "This assertion is in certain special cases correct, but does not strike in general at the true import of the matter, as I shall show by a simple example."
+    },
+    {
+      "id": 133,
+      "paragraph": 20,
+      "kind": "planck",
+      "text": "One of the most important laws of thermodynamics is, that the total energy of an ideal gas depends only upon its temperature, and not upon its volume."
+    },
+    {
+      "id": 134,
+      "paragraph": 20,
+      "kind": "planck",
+      "text": "If an ideal gas be allowed to expand while doing work, and if the cooling of the gas be prevented through the simultaneous addition of heat from a heat reservoir at higher temperature, the gas remains unchanged in temperature and energy content, and one may say that the heat furnished by the heat reservoir is completely transformed into work without exchange of energy."
+    },
+    {
+      "id": 135,
+      "paragraph": 20,
+      "kind": "planck",
+      "text": "Not the least objection can be urged against this assertion."
+    },
+    {
+      "id": 136,
+      "paragraph": 20,
+      "kind": "planck",
+      "text": "The law of incomplete transformation of heat into work is retained only through the adoption of a different point of view, but which has nothing to do with the status of the physical facts and only modifies the way of looking at the matter, and therefore can neither be supported nor contradicted through facts; namely, through the introduction ad hoc of new particular kinds of energy, in that one divides the energy of the gas into numerous parts which individually can depend upon the volume."
+    },
+    {
+      "id": 137,
+      "paragraph": 20,
+      "kind": "planck",
+      "text": "But it is a priori evident that one can never derive from so artificial a definition a new physical law, and it is with such that we have to do when we pass from the first law, the principle of conservation of energy, to the second law."
+    },
+    {
+      "id": 138,
+      "paragraph": 21,
+      "kind": "planck",
+      "text": "I desire now to introduce such a new physical law: “It is not possible to construct a periodically functioning motor which in principle does not involve more than the raising of a load and the cooling of a heat reservoir.” It is to be understood, that in one cycle of the motor quite arbitrary complicated processes may take place, but that after the completion of one cycle there shall remain no other changes in the surroundings than that the heat reservoir is cooled and that the load is raised a corresponding distance, which may be calculated from the first law."
+    },
+    {
+      "id": 139,
+      "paragraph": 21,
+      "kind": "planck",
+      "text": "Such a motor could of course be used at the same time as a refrigerating machine also, without any further expenditure of energy and materials."
+    },
+    {
+      "id": 140,
+      "paragraph": 21,
+      "kind": "planck",
+      "text": "Such a motor would moreover be the most efficient in the world, since it would involve no cost to run it; for the earth, the atmosphere, or the ocean could be utilized as the heat reservoir."
+    },
+    {
+      "id": 141,
+      "paragraph": 21,
+      "kind": "planck",
+      "text": "We shall call this, in accordance with the proposal of W. Ostwald, perpetual motion of the second kind."
+    },
+    {
+      "id": 142,
+      "paragraph": 21,
+      "kind": "planck",
+      "text": "Whether in nature such a motion is actually possible cannot be inferred from the energy principle, and may only be determined by special experiments."
+    },
+    {
+      "id": 143,
+      "paragraph": 22,
+      "kind": "planck",
+      "text": "Just as the impossibility of perpetual motion of the first kind leads to the principle of the conservation of energy, the quite independent principle of the impossibility of perpetual motion of the second kind leads to the second law of thermodynamics, and, if we assume this impossibility as proven experimentally, the general law follows immediately: there are processes in nature which in no possible way can be made completely reversible."
+    },
+    {
+      "id": 144,
+      "paragraph": 22,
+      "kind": "planck",
+      "text": "For consider, for example, a frictional process through which mechanical work is transformed into heat with the aid of suitable apparatus, if it were actually possible to make in some way such complicated apparatus completely reversible, so that everywhere in nature exactly the same conditions be reestablished as existed at the beginning of the frictional process, then the apparatus considered would be nothing more than the motor described above, furnishing a perpetual motion of the second kind."
+    },
+    {
+      "id": 145,
+      "paragraph": 22,
+      "kind": "planck",
+      "text": "This appears evident immediately, if one clearly perceives what the apparatus would accomplish: transformation of heat into work without any further outstanding change."
+    },
+    {
+      "id": 146,
+      "paragraph": 23,
+      "kind": "planck",
+      "text": "We call such a process, which in no wise can be made completely reversible, an irreversible process, and all other processes reversible processes; and thus we strike the kernel of the second law of thermodynamics when we say that irreversible processes occur in nature."
+    },
+    {
+      "id": 147,
+      "paragraph": 23,
+      "kind": "planck",
+      "text": "In accordance with this, the changes in nature have a unidirectional tendency."
+    },
+    {
+      "id": 148,
+      "paragraph": 23,
+      "kind": "planck",
+      "text": "With each irreversible process the world takes a step forward, the traces of which under no circumstances can be completely obliterated."
+    },
+    {
+      "id": 149,
+      "paragraph": 23,
+      "kind": "planck",
+      "text": "Besides friction, examples of irreversible processes are: heat conduction, diffusion, conduction of electricity in conductors of finite resistance, emission of light and heat radiation, disintegration of the atom in radioactive substances, and so on."
+    },
+    {
+      "id": 150,
+      "paragraph": 23,
+      "kind": "planck",
+      "text": "On the other hand, examples of reversible processes are: motion of the planets, free fall in empty space, the undamped motion of a pendulum, the frictionless flow of liquids, the propagation of light and sound waves without absorption and refraction, undamped electrical vibrations, and so on."
+    },
+    {
+      "id": 151,
+      "paragraph": 23,
+      "kind": "planck",
+      "text": "For all these processes are already periodic or may be made completely reversible through suitable contrivances, so that there remains no outstanding change in nature; for example, the free fall of a body whereby the acquired velocity is utilized to raise the body again to its original height; a light or sound wave which is allowed in a suitable manner to be totally reflected from a perfect mirror."
+    },
+    {
+      "id": 152,
+      "paragraph": 24,
+      "kind": "planck",
+      "text": "What now are the general properties and criteria of irreversible processes, and what is the general quantitative measure of irreversibility?"
+    },
+    {
+      "id": 153,
+      "paragraph": 24,
+      "kind": "planck",
+      "text": "This question has been examined and answered in the most widely different ways, and it is evident here again how difficult it is to reach a correct formularization of a problem."
+    },
+    {
+      "id": 154,
+      "paragraph": 24,
+      "kind": "planck",
+      "text": "Just as originally we came upon the trail of the energy principle through the technical problem of perpetual motion, so again a technical problem, namely, that of the steam engine, led to the differentiation between reversible and irreversible processes."
+    },
+    {
+      "id": 155,
+      "paragraph": 24,
+      "kind": "planck",
+      "text": "Long ago Sadi Carnot recognized, although he utilized an incorrect conception of the nature of heat, that irreversible processes are less economical than reversible, or that in an irreversible process a certain opportunity to derive mechanical work from heat is lost."
+    },
+    {
+      "id": 156,
+      "paragraph": 24,
+      "kind": "planck",
+      "text": "What then could have been simpler than the thought of making, quite in general, the measure of the irreversibility of a process the quantity of mechanical work which is unavoidably lost in the process."
+    },
+    {
+      "id": 157,
+      "paragraph": 24,
+      "kind": "planck",
+      "text": "For a reversible process then, the unavoidably lost work is naturally to be set equal to zero."
+    },
+    {
+      "id": 158,
+      "paragraph": 24,
+      "kind": "planck",
+      "text": "This view, in accordance with which the import of the second law consists in a dissipation of useful energy, has in fact, in certain special cases, for example, in isothermal processes, proved itself useful."
+    },
+    {
+      "id": 159,
+      "paragraph": 24,
+      "kind": "planck",
+      "text": "It has persisted, therefore, in certain of its aspects up to the present day; but for the general case, however, it has shown itself as fruitless and, in fact, misleading."
+    },
+    {
+      "id": 160,
+      "paragraph": 24,
+      "kind": "planck",
+      "text": "The reason for this lies in the fact that the question concerning the lost work in a given irreversible process is by no means to be answered in a determinate manner, so long as nothing further is specified with regard to the source of energy from which the work considered shall be obtained."
+    },
+    {
+      "id": 161,
+      "paragraph": 25,
+      "kind": "planck",
+      "text": "An example will make this clear."
+    },
+    {
+      "id": 162,
+      "paragraph": 25,
+      "kind": "planck",
+      "text": "Heat conduction is an irreversible process, or as Clausius expresses it: Heat cannot without compensation pass from a colder to a warmer body."
+    },
+    {
+      "id": 163,
+      "paragraph": 25,
+      "kind": "planck",
+      "text": "What now is the work which in accordance with definition is lost when the quantity of heat Q passes through direct conduction from a warmer body at the temperature T one to a colder body, at the temperature T two?"
+    },
+    {
+      "id": 164,
+      "paragraph": 25,
+      "kind": "planck",
+      "text": "In order to answer this question, we make use of the heat transfer involved in carrying out a reversible Carnot cyclical process between the two bodies employed as heat reservoirs."
+    },
+    {
+      "id": 165,
+      "paragraph": 25,
+      "kind": "planck",
+      "text": "In this process a certain amount of work would be obtained, and it is just the amount sought, since it is that which would be lost in the direct passage by conduction; but this has no definite value so long as we do not know whence the work originates, whether, for example, in the warmer body or in the colder body, or from somewhere else."
+    },
+    {
+      "id": 166,
+      "paragraph": 25,
+      "kind": "planck",
+      "text": "Let one reflect that the heat given up by the warmer body in the reversible process is certainly not equal to the heat absorbed by the colder body, because a certain amount of heat is transformed into work, and that we can identify, with exactly the same right, the quantity of heat Q transferred by the direct process of conduction with that which in the cyclical process is given up by the warmer body, or with that absorbed by the colder body."
+    },
+    {
+      "id": 167,
+      "paragraph": 25,
+      "kind": "planck",
+      "text": "As one does the former or the latter, he accordingly obtains for the quantity of lost work in the process of conduction: Q times, T one minus T two, divided by T one; or, Q times, T one minus T two, divided by T two."
+    },
+    {
+      "id": 168,
+      "paragraph": 25,
+      "kind": "planck",
+      "text": "We see, therefore, that the proposed method of expressing mathematically the irreversibility of a process does not in general effect its object, and at the same time we recognize the peculiar reason which prevents its doing so."
+    },
+    {
+      "id": 169,
+      "paragraph": 25,
+      "kind": "planck",
+      "text": "The statement of the question is too anthropomorphic."
+    },
+    {
+      "id": 170,
+      "paragraph": 25,
+      "kind": "planck",
+      "text": "It is primarily too much concerned with the needs of mankind, in that it refers directly to the acquirement of useful work."
+    },
+    {
+      "id": 171,
+      "paragraph": 25,
+      "kind": "planck",
+      "text": "If one require from nature a determinate answer, he must take a more general point of view, more disinterested, less economic."
+    },
+    {
+      "id": 172,
+      "paragraph": 25,
+      "kind": "planck",
+      "text": "We shall now seek to do this."
+    },
+    {
+      "id": 173,
+      "paragraph": 26,
+      "kind": "planck",
+      "text": "Let us consider any typical process occurring in nature."
+    },
+    {
+      "id": 174,
+      "paragraph": 26,
+      "kind": "planck",
+      "text": "This will carry all bodies concerned in it from a determinate initial state, which I designate as state A, into a determinate final state B. The process is either reversible or irreversible."
+    },
+    {
+      "id": 175,
+      "paragraph": 26,
+      "kind": "planck",
+      "text": "A third possibility is excluded."
+    },
+    {
+      "id": 176,
+      "paragraph": 26,
+      "kind": "planck",
+      "text": "But whether it is reversible or irreversible depends solely upon the nature of the two states A and B, and not at all upon the way in which the process has been carried out; for we are only concerned with the answer to the question as to whether or not, when the state B is once reached, a complete return to A in any conceivable manner may be accomplished."
+    },
+    {
+      "id": 177,
+      "paragraph": 26,
+      "kind": "planck",
+      "text": "If now, the complete return from B to A is not possible, and the process therefore irreversible, it is obvious that the state B may be distinguished in nature through a certain property from state A. Several years ago I ventured to express this as follows: that nature possesses a greater “preference” for state B than for state A. In accordance with this mode of expression, all those processes of nature are impossible for whose final state nature possesses a smaller preference than for the original state."
+    },
+    {
+      "id": 178,
+      "paragraph": 26,
+      "kind": "planck",
+      "text": "Reversible processes constitute a limiting case; for such, nature possesses an equal preference for the initial and for the final state, and the passage between them takes place as well in one direction as the other."
+    },
+    {
+      "id": 179,
+      "paragraph": 27,
+      "kind": "planck",
+      "text": "We have now to seek a physical quantity whose magnitude shall serve as a general measure of the preference of nature for a given state."
+    },
+    {
+      "id": 180,
+      "paragraph": 27,
+      "kind": "planck",
+      "text": "This quantity must be one which is directly determined by the state of the system considered, without reference to the previous history of the system, as is the case with the energy, with the volume, and with other properties of the system."
+    },
+    {
+      "id": 181,
+      "paragraph": 27,
+      "kind": "planck",
+      "text": "It should possess the peculiarity of increasing in all irreversible processes and of remaining unchanged in all reversible processes, and the amount of change which it experiences in a process would furnish a general measure for the irreversibility of the process."
+    },
+    {
+      "id": 182,
+      "paragraph": 28,
+      "kind": "planck",
+      "text": "R. Clausius actually found this quantity and called it “entropy.” Every system of bodies possesses in each of its states a definite entropy, and this entropy expresses the preference of nature for the state in question."
+    },
+    {
+      "id": 183,
+      "paragraph": 28,
+      "kind": "planck",
+      "text": "It can, in all the processes which take place within the system, only increase and never decrease."
+    },
+    {
+      "id": 184,
+      "paragraph": 28,
+      "kind": "planck",
+      "text": "If it be desired to consider a process in which external actions upon the system are present, it is necessary to consider those bodies in which these actions originate as constituting part of the system; then the law as stated in the above form is valid."
+    },
+    {
+      "id": 185,
+      "paragraph": 28,
+      "kind": "planck",
+      "text": "In accordance with it, the entropy of a system of bodies is simply equal to the sum of the entropies of the individual bodies, and the entropy of a single body is, in accordance with Clausius, found by the aid of a certain reversible process."
+    },
+    {
+      "id": 186,
+      "paragraph": 28,
+      "kind": "planck",
+      "text": "Conduction of heat to a body increases its entropy, and, in fact, by an amount equal to the ratio of the quantity of heat given the body to its temperature."
+    },
+    {
+      "id": 187,
+      "paragraph": 28,
+      "kind": "planck",
+      "text": "Simple compression, on the other hand, does not change the entropy."
+    },
+    {
+      "id": 188,
+      "paragraph": 29,
+      "kind": "planck",
+      "text": "Returning to the example mentioned above, in which the quantity of heat Q is conducted from a warmer body at the temperature T one to a colder body at the temperature T two, in accordance with what precedes, the entropy of the warmer body decreases in this process, while, on the other hand, that of the colder increases, and the sum of both changes, that is, the change of the total entropy of both bodies, is: minus Q over T one, plus Q over T two, is greater than zero."
+    },
+    {
+      "id": 189,
+      "paragraph": 30,
+      "kind": "planck",
+      "text": "This positive quantity furnishes, in a manner free from all arbitrary assumptions, the measure of the irreversibility of the process of heat conduction."
+    },
+    {
+      "id": 190,
+      "paragraph": 30,
+      "kind": "planck",
+      "text": "Such examples may be cited indefinitely."
+    },
+    {
+      "id": 191,
+      "paragraph": 30,
+      "kind": "planck",
+      "text": "Every chemical process furnishes an increase of entropy."
+    },
+    {
+      "id": 192,
+      "paragraph": 31,
+      "kind": "planck",
+      "text": "We shall here consider only the most general case treated by Clausius: an arbitrary reversible or irreversible cyclical process, carried out with any physico-chemical arrangement, utilizing an arbitrary number of heat reservoirs."
+    },
+    {
+      "id": 193,
+      "paragraph": 31,
+      "kind": "planck",
+      "text": "Since the arrangement at the conclusion of the cyclical process is the same as that at the beginning, the final state of the process is to be distinguished from the initial state solely through the different heat content of the heat reservoirs, and in that a certain amount of mechanical work has been furnished or consumed."
+    },
+    {
+      "id": 194,
+      "paragraph": 31,
+      "kind": "planck",
+      "text": "Let Q be the heat given up in the course of the process by a heat reservoir at the temperature T, and let A be the total work yielded (consisting, for example, in the raising of weights); then, in accordance with the first law of thermodynamics: the sum of all the Q equals A. In accordance with the second law, the sum of the changes in entropy of all the heat reservoirs is positive, or zero."
+    },
+    {
+      "id": 195,
+      "paragraph": 31,
+      "kind": "planck",
+      "text": "It follows, therefore, since the entropy of a reservoir is decreased by the amount Q over T through the loss of heat Q that: the sum of all the Q over T is less than or equal to zero."
+    },
+    {
+      "id": 196,
+      "paragraph": 31,
+      "kind": "planck",
+      "text": "This is the well-known inequality of Clausius."
+    },
+    {
+      "id": 197,
+      "paragraph": 32,
+      "kind": "planck",
+      "text": "In an isothermal cyclical process, T is the same for all reservoirs."
+    },
+    {
+      "id": 198,
+      "paragraph": 32,
+      "kind": "planck",
+      "text": "Therefore: the sum of all the Q is less than or equal to zero; hence, A is less than or equal to zero."
+    },
+    {
+      "id": 199,
+      "paragraph": 32,
+      "kind": "planck",
+      "text": "That is: in an isothermal cyclical process, heat is produced and work is consumed."
+    },
+    {
+      "id": 200,
+      "paragraph": 32,
+      "kind": "planck",
+      "text": "In the limiting case, a reversible isothermal cyclical process, the sign of equality holds, and therefore the work consumed is zero, and also the heat produced."
+    },
+    {
+      "id": 201,
+      "paragraph": 32,
+      "kind": "planck",
+      "text": "This law plays a leading rôle in the application of thermodynamics to physical chemistry."
+    },
+    {
+      "id": 202,
+      "paragraph": 33,
+      "kind": "planck",
+      "text": "The second law of thermodynamics including all of its consequences has thus led to the principle of increase of entropy."
+    },
+    {
+      "id": 203,
+      "paragraph": 33,
+      "kind": "planck",
+      "text": "You will now readily understand, having regard to the questions mentioned above, why I express it as my opinion that in the theoretical physics of the future the first and most important differentiation of all physical processes will be into reversible and irreversible processes."
+    },
+    {
+      "id": 204,
+      "paragraph": 34,
+      "kind": "planck",
+      "text": "In fact, all reversible processes, whether they take place in material bodies, in the ether, or in both together, show a much greater similarity among themselves than to any irreversible process."
+    },
+    {
+      "id": 205,
+      "paragraph": 34,
+      "kind": "planck",
+      "text": "In the differential equations of reversible processes the time differential enters only as an even power, corresponding to the circumstance that the sign of time can be reversed."
+    },
+    {
+      "id": 206,
+      "paragraph": 34,
+      "kind": "planck",
+      "text": "This holds equally well for vibrations of the pendulum, electrical vibrations, acoustic and optical waves, and for motions of mass points or of electrons, if we only exclude every kind of damping."
+    },
+    {
+      "id": 207,
+      "paragraph": 34,
+      "kind": "planck",
+      "text": "But to such processes also belong those infinitely slow processes of thermodynamics which consist of states of equilibrium in which the time in general plays no rôle, or, as one may also say, occurs with the zero power, which is to be reckoned as an even power."
+    },
+    {
+      "id": 208,
+      "paragraph": 34,
+      "kind": "planck",
+      "text": "As Helmholtz has pointed out, all these reversible processes have the common property that they may be completely represented by the principle of least action, which gives a definite answer to all questions concerning any such measurable process, and, to this extent, the theory of reversible processes may be regarded as completely established."
+    },
+    {
+      "id": 209,
+      "paragraph": 34,
+      "kind": "planck",
+      "text": "Reversible processes have, however, the disadvantage that singly and collectively they are only ideal: in actual nature there is no such thing as a reversible process."
+    },
+    {
+      "id": 210,
+      "paragraph": 34,
+      "kind": "planck",
+      "text": "Every natural process involves in greater or less degree friction or conduction of heat."
+    },
+    {
+      "id": 211,
+      "paragraph": 34,
+      "kind": "planck",
+      "text": "But in the domain of irreversible processes the principle of least action is no longer sufficient; for the principle of increase of entropy brings into the system of physics a wholly new element, foreign to the action principle, and which demands special mathematical treatment."
+    },
+    {
+      "id": 212,
+      "paragraph": 34,
+      "kind": "planck",
+      "text": "The unidirectional course of a process in the attainment of a fixed final state is related to it."
+    },
+    {
+      "id": 213,
+      "paragraph": 35,
+      "kind": "planck",
+      "text": "I hope the foregoing considerations have sufficed to make clear to you that the distinction between reversible and irreversible processes is much broader than that between mechanical and electrical processes and that, therefore, this difference, with better right than any other, may be taken advantage of in classifying all physical processes, and that it may eventually play in the theoretical physics of the future the principal rôle."
+    },
+    {
+      "id": 214,
+      "paragraph": 36,
+      "kind": "planck",
+      "text": "However, the classification mentioned is in need of quite an essential improvement, for it cannot be denied that in the form set forth, the system of physics is still suffering from a strong dose of anthropomorphism."
+    },
+    {
+      "id": 215,
+      "paragraph": 36,
+      "kind": "planck",
+      "text": "In the definition of irreversibility, as well as in that of entropy, reference is made to the possibility of carrying out in nature certain changes, and this means, fundamentally, nothing more than that the division of physical processes is made dependent upon the manipulative skill of man in the art of experimentation, which certainly does not always remain at a fixed stage, but is continually being more and more perfected."
+    },
+    {
+      "id": 216,
+      "paragraph": 36,
+      "kind": "planck",
+      "text": "If, therefore, the distinction between reversible and irreversible processes is actually to have a lasting significance for all times, it must be essentially broadened and made independent of any reference to the capacities of mankind."
+    },
+    {
+      "id": 217,
+      "paragraph": 36,
+      "kind": "planck",
+      "text": "How this may happen, I desire to state one week from tomorrow."
+    },
+    {
+      "id": 218,
+      "paragraph": 36,
+      "kind": "planck",
+      "text": "The lecture of tomorrow will be devoted to the problem of bringing before you some of the most important of the great number of practical consequences following from the entropy principle."
+    }
+  ]
+}

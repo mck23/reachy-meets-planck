@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "reachy_meets_planck"
+version = "0.1.0"
+description = "Reachy Mini reads Max Planck's first Columbia lecture (1909)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "reachy-mini",
+    "numpy",
+    "soxr",
+    "vosk",
+]
+keywords = ["reachy-mini-app"]
+
+[project.optional-dependencies]
+# Only needed to (re)generate the speech audio with scripts/render_audio.py.
+render = [
+    "openai>=2",
+    "python-dotenv",
+]
+
+[project.entry-points."reachy_mini_apps"]
+reachy_meets_planck = "reachy_meets_planck.main:ReachyMeetsPlanck"
+
+[tool.setuptools]
+package-dir = { "" = "." }
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["reachy_meets_planck*"]
+
+[tool.setuptools.package-data]
+reachy_meets_planck = ["**/*"] # Also include all non-.py files
